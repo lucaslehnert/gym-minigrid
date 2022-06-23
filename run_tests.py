@@ -24,7 +24,7 @@ for env_idx, env_name in enumerate(env_list):
     env = gym.make(env_name)
     env.max_steps = min(env.max_steps, 200)
     env.reset()
-    env.render('rgb_array')
+    env.render(mode='rgb_array')
 
     # Verify that the same seed always produces the same environment
     for i in range(0, 5):
@@ -66,7 +66,7 @@ for env_idx, env_name in enumerate(env_list):
             num_episodes += 1
             env.reset()
 
-        env.render('rgb_array')
+        env.render(mode='rgb_array')
 
     # Test the close method
     env.close()
